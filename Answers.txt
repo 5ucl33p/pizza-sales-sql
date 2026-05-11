@@ -80,14 +80,25 @@ ORDER BY quantity DESC;
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 7.)Determine the distribution of orders by hour of the day.
+-->SELECT 
+    HOUR(order_time) AS hour, COUNT(order_id) AS order_count
+FROM
+    orders
+GROUP BY hour;
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 8.)Join relevant tables to find the category-wise distribution of pizzas.
+-->SELECT 
+    category, COUNT(name)
+FROM
+    pizza_types
+GROUP BY category;
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 9.)Group the orders by date and calculate the average number of pizzas ordered per day.
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
